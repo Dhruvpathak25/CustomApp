@@ -3,6 +3,7 @@ import {View, Text, TouchableOpacity} from 'react-native';
 
 const TabBar = ({onSelectTab}) => {
   const [selectedTab, setSelectedTab] = useState('current');
+
   const handleTabClick = tab => {
     setSelectedTab(tab);
     onSelectTab(tab);
@@ -15,17 +16,15 @@ const TabBar = ({onSelectTab}) => {
         flexDirection: 'row',
         justifyContent: 'space-evenly',
         borderRadius: 10,
-        width: '80%',
-        paddingRight: 10,
-        gap: 1,
+        width: '90%',
         alignSelf: 'center',
       }}>
       <TouchableOpacity
         style={{
+          flex: 1,
           padding: 10,
-          borderRadius: 10,
-          paddingHorizontal: 30,
-          marginRight: 10,
+          borderRadius: 7,
+          // paddingHorizontal: 39,
           backgroundColor: selectedTab === 'current' ? '#087FFE' : '#F4F4F4',
         }}
         onPress={() => handleTabClick('current')}>
@@ -33,18 +32,17 @@ const TabBar = ({onSelectTab}) => {
           style={{
             color: selectedTab === 'current' ? 'white' : 'black',
             fontWeight: 'bold',
+            textAlign: 'center',
           }}>
           Current Requests
         </Text>
       </TouchableOpacity>
       <TouchableOpacity
         style={{
+          flex: 1,
           padding: 10,
-          marginRight: -9,
-
-          borderRadius: 10,
-          paddingHorizontal: 30,
-
+          borderRadius: 7,
+          // paddingHorizontal: 39,
           backgroundColor: selectedTab === 'past' ? '#087FFE' : '#F4F4F4',
         }}
         onPress={() => handleTabClick('past')}>
@@ -52,6 +50,7 @@ const TabBar = ({onSelectTab}) => {
           style={{
             color: selectedTab === 'past' ? 'white' : 'black',
             fontWeight: 'bold',
+            textAlign: 'center',
           }}>
           Past Requests
         </Text>
