@@ -6,29 +6,40 @@ const ServiceCard = ({service}) => {
 
   return (
     <View style={styles.container}>
+      {/* First line: Service ID, Name, and Service Date */}
       <View style={styles.row}>
         <View style={styles.column}>
-          <Text style={styles.title}>Service ID</Text>
-          <Text style={styles.data}>{id}</Text>
+          <Text style={styles.title}>Service ID:</Text>
+          <Text numberOfLines={1} style={styles.data}>
+            {id}
+          </Text>
         </View>
         <View style={styles.column}>
-          <Text style={styles.title}>Name</Text>
-          <Text style={styles.data}>{name}</Text>
+          <Text style={styles.title}>Name:</Text>
+          <Text numberOfLines={1} style={styles.data}>
+            {name}
+          </Text>
         </View>
         <View style={styles.column}>
-          <Text style={styles.title}>Service Date</Text>
-          <Text style={styles.data}>{serviceDate}</Text>
+          <Text style={styles.title}>Service Date:</Text>
+          <Text numberOfLines={1} style={styles.data}>
+            {serviceDate}
+          </Text>
         </View>
       </View>
-
+      {/* Second line: Location and Number of Persons */}
       <View style={styles.row}>
         <View style={styles.column}>
-          <Text style={styles.title}>Location</Text>
-          <Text style={styles.data}>{location}</Text>
+          <Text style={styles.title}>Location:</Text>
+          <Text numberOfLines={1} style={styles.data}>
+            {location}
+          </Text>
         </View>
         <View style={styles.column}>
-          <Text style={styles.title}>No. of Person</Text>
-          <Text style={styles.data}>{numberOfPersons}</Text>
+          <Text style={styles.title}>No. of Person:</Text>
+          <Text numberOfLines={1} style={styles.data}>
+            {numberOfPersons}
+          </Text>
         </View>
         <View style={styles.column} />
       </View>
