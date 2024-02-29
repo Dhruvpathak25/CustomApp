@@ -71,7 +71,7 @@ const App = () => {
       name: 'John Doe',
       serviceDate: 'Dec 15-17, 2023',
       location: 'New York',
-      numberOfPersons: 2,
+      numberOfPersons: 6,
     },
     {
       id: 'SRV 003',
